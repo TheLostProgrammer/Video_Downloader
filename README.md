@@ -34,7 +34,8 @@ $ pip install earthpy_
 _Step 5: 
 Run Video_Downloader.py_
 
-**Linux:***
+**Linux:**
+
 (this uses arch as an example, replace pacman with your distro's package manager)
 
 _Step 1: Install Python
