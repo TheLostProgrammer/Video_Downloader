@@ -32,6 +32,7 @@ $ pip install earthpy
 Step 5: 
 Run Video_Downloader.py
 
+
 Linux:
 
 (this uses arch as an example, replace pacman with your distro's package manager)
@@ -56,6 +57,7 @@ $ pip install earthpy
 
 Step 5:
 Run Video_Downloader.py
+
 
 Windows 10:
 
