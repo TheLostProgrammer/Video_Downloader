@@ -178,7 +178,6 @@ def video():
             video_resolution_label.set(f"The resolution of the video is {video_resolution_input.get()}")
     elif str(video_url_input.get()[0:24]) == "https://www.facebook.com" and "videos" in str(video_url_input.get()):
         pass
-    if mp3_mp4_input.get().lower() =="mp3":
 
     else:
         error1.set("Unknown Error has occurred.")
