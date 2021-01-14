@@ -8,8 +8,8 @@ Video support for FaceBook and other websites is coming in 2 weeks
 For any problems or suggestions relating to the readme or installation send an email to arkaitz.hedger@gmail.com.
 
 
-#########Installation#########
-
+#########Installation#########<br />
+<br />
 **MacOs:**
 
 _Step 1: Install Python.
