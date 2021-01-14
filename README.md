@@ -10,17 +10,17 @@ For any problems or suggestions relating to the readme or installation send an e
 
 **MacOs:**
 
-Step 1: Install Python.
-Go to https://www.python.org/ and install the dmg
+***Step 1: Install Python.
+Go to https://www.python.org/ and install the dmg***
 
-Step 2: Install pip
+***Step 2: Install pip
 pip is used to install other python modules
-$ python3 get-pip.py
+$ python3 get-pip.py***
 
 
-Step 3: Install gdal
+***Step 3: Install gdal
 needed for earthpy
-$ pip install gdal
+$ pip install gdal***
 
 Step 4: Install python modules
 Type these into your terminal
@@ -31,7 +31,6 @@ $ pip install earthpy
 
 Step 5: 
 Run Video_Downloader.py
-
 
 **Linux:***
 (this uses arch as an example, replace pacman with your distro's package manager)
@@ -56,7 +55,6 @@ $ pip install earthpy
 
 Step 5:
 Run Video_Downloader.py
-
 
 **Windows 10:**
 
