@@ -1,13 +1,11 @@
+# this code is owned and managed by Caleb Pierce (Please to not claim and post as yours on Social Media)
 from tkinter import *
-from tkinter import messagebox, filedialog
+from tkinter import filedialog
 from pytube import YouTube, Playlist
 import pafy
 import glob
 import os
 import earthpy as et
-import re
-import requests
-import urllib.request
 
 # setting screen size and title of window
 window = Tk()
@@ -16,21 +14,21 @@ window.title("Youtube Video Downloader")
 
 
 def browse():
-    download_Directory = filedialog.askdirectory(initialdir=et.io.HOME + "/Downloads")
-    video_location_input.set(download_Directory)
+    download_directory = filedialog.askdirectory(initialdir=et.io.HOME + "/Downloads")
+    video_location_input.set(download_directory)
 
 
 # input for URL location for a video
 video_url_label = StringVar()
 video_url_input = StringVar()
-video_url_label.set("\nEnter the Youtube Video URL")
+video_url_label.set("\nEnter URL of Youtube Video or Playlist")
 Label(window, textvariable=video_url_label).pack()
 Entry(window, textvariable=video_url_input, width=30).pack()
 
 # input for download location for a video
 video_location_label = StringVar()
 video_location_input = StringVar()
-video_location_label.set("\nEnter download location")
+video_location_label.set("\nChoose download location")
 Label(window, textvariable=video_location_label).pack()
 Entry(window, textvariable=video_location_input, width=30).pack()
 video_location_input.set(et.io.HOME + "/Downloads")
@@ -40,6 +38,7 @@ browse_B = Button(window, text="Browse", command=browse, width=10).pack()
 video_resolution_label = StringVar()
 video_resolution_input = StringVar()
 video_resolution_label.set("\nEnter desired resolution (Make sure video supports it)\n1080p recommended and not above")
+video_resolution_input.set("1080p")
 Label(window, textvariable=video_resolution_label).pack()
 Entry(window, textvariable=video_resolution_input, width=30).pack()
 
@@ -66,7 +65,18 @@ def video():
 
         # getting resolution input for video
         if len(video_resolution_input.get()) > 0:
-            YouTube(video_url_input.get()).streams.filter(res=video_resolution_input.get()).first().download(video_location_input.get(), filename="video_file8757")
+            link = YouTube(video_url_input.get())
+            result = []
+            for i in link.streams:
+                result.append(i.resolution)
+            print(result)
+
+        # checking if resolution is in the videos available resolutions
+            if "2160p" in result or "1440p" in result or "1080p" in result:
+                x = "1080p"
+                YouTube(video_url_input.get()).streams.filter(res=x).first().download(video_location_input.get(), filename="video_file8757")
+            else:
+                YouTube(video_url_input.get()).streams.filter(video_resolution_input.get()).download(video_location_input.get(), filename="video_file8757")
         else:
             link = YouTube(video_url_input.get())
             result = []
@@ -75,7 +85,7 @@ def video():
             print(result)
 
             # checking if resolution is in the videos available resolutions
-            if "1440p" in result or "1080p" in result:
+            if "2160p" in result or "1440p" in result or "1080p" in result:
                 x = "1080p"
                 YouTube(video_url_input.get()).streams.filter(res=x).first().download(video_location_input.get(), filename="video_file8757")
             else:
@@ -185,10 +195,10 @@ def video():
     # except Exception as e:
     #     print(len(str(e)))
     #     if len(str(e)) > 50:
-    #         s = str(e) + " " + "\nContact mrtechguycaleb@gmail.com to resolve problem."
+    #         s = str(e) + " " + "\nContact caleb.pierce1@outlook.com to resolve problem."
     #         error1.set("\n".join([s[i:i + 50] for i in range(0, len(s), 50)]))
     #     else:
-    #         error1.set(f"Error:\n{str(e)}\n\ncontact mrtechguycaleb@gmail.com to resolve problem")
+    #         error1.set(f"Error:\n{str(e)}\n\ncontact caleb.pierce1@outlook.com to resolve problem")
     #     window.update()
 
 
