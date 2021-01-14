@@ -62,7 +62,7 @@ Run Video_Downloader.py_
 **Windows 10:**
 
 _Step 1: Install Python
-Go to python.org and download the exe, then run it._
+Go to https://www.python.org/ and download the exe, then run it._
 
 _Step 2: Install pip
 Open your Command Prompt and type in
