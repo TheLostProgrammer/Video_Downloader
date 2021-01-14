@@ -9,6 +9,7 @@ For any problems or suggestions relating to the readme or installation send an e
 #########Installation#########
 
 MacOs:
+
 Step 1: Install Python.
 Go to https://www.python.org/ and install the dmg
 
@@ -32,6 +33,7 @@ Step 5:
 Run Video_Downloader.py
 
 Linux:
+
 (this uses arch as an example, replace pacman with your distro's package manager)
 
 Step 1: Install Python
