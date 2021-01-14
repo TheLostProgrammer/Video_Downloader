@@ -10,6 +10,7 @@ For any problems or suggestions relating to the readme or installation send an e
 
 #########Installation#########
 
+
 **MacOs:**
 
 _Step 1: Install Python.
@@ -33,6 +34,7 @@ $ pip install earthpy_
 
 _Step 5: 
 Run Video_Downloader.py_
+
 
 **Linux:**
 
@@ -58,6 +60,7 @@ $ pip install earthpy_
 
 _Step 5:
 Run Video_Downloader.py_
+
 
 **Windows 10:**
 
