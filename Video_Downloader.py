@@ -1,4 +1,3 @@
-# this code is owned and managed by Caleb Pierce (Please to not claim and post as yours on Social Media)
 from tkinter import *
 from tkinter import messagebox, filedialog
 from pytube import YouTube, Playlist
@@ -186,10 +185,10 @@ def video():
     # except Exception as e:
     #     print(len(str(e)))
     #     if len(str(e)) > 50:
-    #         s = str(e) + " " + "\nContact caleb.pierce1@outlook.com to resolve problem."
+    #         s = str(e) + " " + "\nContact mrtechguycaleb@gmail.com to resolve problem."
     #         error1.set("\n".join([s[i:i + 50] for i in range(0, len(s), 50)]))
     #     else:
-    #         error1.set(f"Error:\n{str(e)}\n\ncontact caleb.pierce1@outlook.com to resolve problem")
+    #         error1.set(f"Error:\n{str(e)}\n\ncontact mrtechguycaleb@gmail.com to resolve problem")
     #     window.update()
 
 
