@@ -28,10 +28,6 @@ video_location_label.set("\nEnter download location")
 Label(window, textvariable=video_location_label).pack()
 Entry(window, textvariable=video_location_input, width=30).pack()
 
-# check OS
-if len(video_location_input.get()) == 0:
-    video_location_input = et.io.HOME+"/Downloads"
-
 # input for resolution for a video
 video_resolution_label = StringVar()
 video_resolution_input = StringVar()
@@ -43,7 +39,10 @@ Entry(window, textvariable=video_resolution_input, width=30).pack()
 def video():
     # if not errors occur this code will be run
     try:
-        # checking if URL is a YouTube video URL
+        # check OS
+        if len(video_location_input.get()) == 0:
+            video_location_input = et.io.HOME+"/Downloads"
+                # checking if URL is a YouTube video URL
         if str(video_url_input.get()[0:30]) == "https://www.youtube.com/watch?":
             # removing special characters from video title
             result1 = ""
