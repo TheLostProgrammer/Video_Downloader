@@ -43,7 +43,7 @@ Entry(window, textvariable=video_resolution_input, width=30).pack()
 def video():
     # if not errors occur this code will be run
     try:
-    # checking if URL is a YouTube video URL
+        # checking if URL is a YouTube video URL
         if str(video_url_input.get()[0:30]) == "https://www.youtube.com/watch?":
             # removing special characters from video title
             result1 = ""
@@ -175,11 +175,13 @@ def video():
                 video_url_label.set("Video Downloaded Successfully")
                 video_location_label.set("Check your download location to find file")
                 video_resolution_label.set(f"The resolution of the video is {video_resolution_input.get()}")
+        # checking if URL is a facebook video
         elif str(video_url_input.get()[0:24]) == "https://www.facebook.com" and "videos" in str(video_url_input.get()):
             pass
-
+        
+        # if the URL is none of the above then this message will be displayed
         else:
-            error1.set("Unknown Error has occurred.")
+            error1.set("Unknown Error has occurred.\nCheck if URL is Valid")
 
     # this code is run if an error occurs
     except Exception as e:
