@@ -1,4 +1,3 @@
-# this code is owned and managed by Caleb Pierce (Please to not claim and post as yours on Social Media)
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube, Playlist
