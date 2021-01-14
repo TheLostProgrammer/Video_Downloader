@@ -10,7 +10,7 @@ For any problems or suggestions relating to the readme or installation send an e
 
 #########Installation#########
 
-<li></li>
+
 **MacOs:**
 
 _Step 1: Install Python.
