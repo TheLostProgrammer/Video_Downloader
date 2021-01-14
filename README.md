@@ -7,6 +7,7 @@ For any problems or suggestions relating to the readme or installation send an e
 
 
 #########Installation#########
+
 MacOs:
 Step 1: Install Python.
 Go to https://www.python.org/ and install the dmg
