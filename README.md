@@ -1,4 +1,4 @@
-# Video_Downloader
+# Video Downloader
 A tool to download videos from facebook, youtube and any other website except those from streaming services with a nice, simple to use GUI.
 This acts as a GUI frontend for youtube-dl using the python programming language. This tool will work on Windows, MacOs and Linux. 
 To Report any bugs or ask any questions send an email to mrtechguycaleb@gmail.com.
