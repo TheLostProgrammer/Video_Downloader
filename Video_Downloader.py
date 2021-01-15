@@ -1,4 +1,3 @@
-
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube, Playlist
