@@ -1,3 +1,4 @@
+
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube, Playlist
@@ -44,7 +45,7 @@ Entry(window, textvariable=video_resolution_input, width=30).pack()
 
 
 def video():
-    if str(video_url_input.get()[0:30]) == "https://www.youtube.com/watch?":
+    if str(video_url_input.get()[0:30]) == "https://www.youtube.com/watch?" or str(video_url_input.get()[0:17]) == "https://youtu.be/":
         # removing special characters from video title
         result1 = ""
         result = pafy.new(video_url_input.get())
@@ -200,3 +201,5 @@ Label(window, textvariable=error1).pack()
 
 
 window.mainloop()
+
+
