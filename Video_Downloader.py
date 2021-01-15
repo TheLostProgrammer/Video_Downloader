@@ -14,7 +14,7 @@ window.title("Youtube Video Downloader")
 
 # gettng download location if browse button pressed
 def browse():
-    download_directory = filedialog.askdirectory(initialdir=et.io.HOME + "/Downloads")
+    download_directory = filedialog.askdirectory(initialdir=video_location_input.get())
     video_location_input.set(download_directory)
 
 
@@ -200,5 +200,3 @@ Label(window, textvariable=error1).pack()
 
 
 window.mainloop()
-
-
