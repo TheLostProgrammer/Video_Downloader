@@ -44,8 +44,6 @@ Entry(window, textvariable=video_resolution_input, width=30).pack()
 
 
 def video():
-    # # if not errors occur this code will be run
-    # try:
     if str(video_url_input.get()[0:30]) == "https://www.youtube.com/watch?":
         # removing special characters from video title
         result1 = ""
@@ -189,17 +187,7 @@ def video():
             video_resolution_label.set(f"The resolution of the video is {video_resolution_input.get()}")
 
     else:
-        error1.set("Unknown Error has occurred.")
-
-    # this code is run if an error occurs
-    # except Exception as e:
-    #     print(len(str(e)))
-    #     if len(str(e)) > 50:
-    #         s = str(e) + " " + "\nContact caleb.pierce1@outlook.com to resolve problem."
-    #         error1.set("\n".join([s[i:i + 50] for i in range(0, len(s), 50)]))
-    #     else:
-    #         error1.set(f"Error:\n{str(e)}\n\ncontact caleb.pierce1@outlook.com to resolve problem")
-    #     window.update()
+        error1.set("Check if the URL is a valid playlist or YouTube URL.")
 
 
 # button for video function
