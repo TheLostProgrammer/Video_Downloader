@@ -6,6 +6,7 @@ import pafy
 import glob
 import os
 import youtube_dl
+from sys import platform
 import ffmpeg
 import sys
 from os import path
@@ -14,9 +15,6 @@ from os import path
 window = Tk()
 window.title("Video Downloader")
 # window.resizable(False, False)
-foreground_colour = "#000000"
-background_colour = "#FFFFFF"
-window.config(bg=background_colour)
 window.geometry("450x350")
 
 # setting switch state:
@@ -26,7 +24,11 @@ btnState = False
 # setting switch function:
 def switch():
     global btnState
-    if btnState:
+    if platform == "linux" or platform == "linux2":
+        btnState = None
+        print("Linux System Theme")
+        pass
+    elif btnState:
         # Light Theme
         print("Light Theme")
         foreground_colour = "#000000"
@@ -63,6 +65,7 @@ def switch():
         mp3_mp4.config(bg=background_colour, foreground=background_colour, highlightbackground=background_colour)
         btnState = True
 
+
 # setting switch state:
 mp3_mp4_state = True
 
@@ -88,7 +91,7 @@ def browse():
 
 
 # Night mode label:
-url_label = Label(window, text="\nEnter URL of Youtube Video or Playlist", foreground=foreground_colour, background=background_colour)
+url_label = Label(window, text="\nEnter URL of Youtube Video or Playlist")
 url_label.grid(row=1, column=1)
 url_input = Entry(window, text="1080p", width=30)
 url_input.grid(row=2, column=1)
@@ -109,10 +112,10 @@ resolution_entry.grid(row=7, column=1)
 resolution_entry.insert(0, "1080p")
 
 # theme widget
-theme_button = Button(window, text="Dark Theme", borderwidth=0, command=switch, highlightbackground=background_colour, width=10)
+theme_button = Button(window, text="Dark Theme", borderwidth=0, command=switch, width=10)
 theme_button.grid(row=2, column=0)
 # theme widget
-mp3_mp4 = Button(window, text="MP4", borderwidth=0, command=mp3_mp4_switch, highlightbackground=background_colour, width=10)
+mp3_mp4 = Button(window, text="MP4", borderwidth=0, command=mp3_mp4_switch, width=10)
 mp3_mp4.grid(row=3, column=0)
 
 
