@@ -149,9 +149,11 @@ def downloader():
                 if "2160p" in result or "1440p" in result or "1080p" in result:
                     x = "1080p"
                     print("Downloading Video...")
+                    print("The resolution is going to be 1080p")
                     YouTube(url_input.get()).streams.filter(res=x).first().download(location_input.get(), filename="video_file8757")
                 else:
                     print("Downloading Video...")
+                    print(f"The resolution is going to be {link.streams.get_highest_resolution()}")
                     YouTube(url_input.get()).streams.get_highest_resolution().download(location_input.get(), filename="video_file8757")
             else:
                 link = YouTube(url_input.get())
