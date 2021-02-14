@@ -1,18 +1,17 @@
+import os
+print("Installing required modules")
+os.system("pip install ffmpeg pafy youtube-dl ffmpeg pytube3 pytube")
+
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube, Playlist
 import pafy
 import glob
-import os
 from sys import platform
 from os import path
 import youtube_dl
 import ffmpeg
 import sys
-
-# installing modules
-print("Installing required modules")
-os.system("pip install ffmpeg pafy youtube-dl ffmpeg pytube3 pytube")
 
 # setting root window:
 window = Tk()
