@@ -1,15 +1,17 @@
-#!/bin/python
 from tkinter import *
 from tkinter import filedialog
 from pytube import YouTube, Playlist
 import pafy
 import glob
 import os
-import youtube_dl
 from sys import platform
+from os import path
+import youtube_dl
 import ffmpeg
 import sys
-from os import path
+
+print("Installing required modules")
+os.system("pip install ffmpeg pafy youtube-dl ffmpeg pytube3 pytube")
 
 # setting root window:
 window = Tk()
@@ -53,12 +55,12 @@ def switch():
         background_colour = "#1E1E1E"
         theme_button.config(text="Light Theme", bg=background_colour, foreground=background_colour, highlightbackground=background_colour)
         url_label.config(background=background_colour, foreground=foreground_colour)
-        url_input.config(background=background_colour, foreground=foreground_colour, highlightbackground=background_colour)
+        url_input.config(background=background_colour, foreground=foreground_colour, highlightbackground=foreground_colour)
         location_label.config(background=background_colour, foreground=foreground_colour)
-        location_input.config(background=background_colour, foreground=foreground_colour, highlightbackground=background_colour)
+        location_input.config(background=background_colour, foreground=foreground_colour, highlightbackground=foreground_colour)
         browse_B.config(bg=background_colour, foreground=background_colour, highlightbackground=background_colour)
         resolution_label.config(background=background_colour, foreground=foreground_colour)
-        resolution_entry.config(background=background_colour, foreground=foreground_colour, highlightbackground=background_colour)
+        resolution_entry.config(background=background_colour, foreground=foreground_colour, highlightbackground=foreground_colour)
         download_button.config(text="Download", bg=background_colour, foreground=background_colour, highlightbackground=background_colour)
         window.config(bg=background_colour)
         error.config(background=background_colour, foreground=foreground_colour)
@@ -323,11 +325,10 @@ def downloader():
                 os.rename(fr'{location_input.get()}/{"audio_file7574" + ".mp4"}',
                           fr'{location_input.get()}/{result_file_name + ".mp3"}')
 
-
-
     else:
         print("Check if the URL is a valid Playlist or YouTube URL.")
         error.config(text="Check if the URL is a valid Playlist or YouTube URL.")
+
 
 # button for video function
 download_button = Button(window, text="Download", command=downloader, width=10)
