@@ -10,6 +10,7 @@ import youtube_dl
 import ffmpeg
 import sys
 
+# installing modules
 print("Installing required modules")
 os.system("pip install ffmpeg pafy youtube-dl ffmpeg pytube3 pytube")
 
