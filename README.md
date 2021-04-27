@@ -2,12 +2,6 @@
 A tool to download videos from youtube. Comes with a simple, clean GUI.
 This acts as a GUI frontend for youtube-dl using the python programming language. This tool will work on Windows, MacOs and Linux. 
 
-Video support for FaceBook and other websites will no longer be coming!
-
-To Report any bugs or ask any questions send an email to mrtechguycaleb@gmail.com.
-For any problems or suggestions relating to the readme or installation send an email to arkaitz.hedger@gmail.com.
-
-
 #########Installation#########
 
 
